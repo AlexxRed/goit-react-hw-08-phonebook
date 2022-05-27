@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { LableForm, Box, Form, FormTitle, InputForm, FormButton } from "./RegisterForm.styled";
 // import { useDispatch } from 'react-redux';
 // import { authOperations } from '../redux/auth';
 
@@ -41,37 +42,37 @@ export default function RegisterPage() {
     };
 
     return (
-        <div>
-        <h2>Please register to use the phonebook.</h2>
+        <Box>
+        <FormTitle>Please register to use the phonebook.</FormTitle>
 
-        <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
-            <label style={styles.label}>
-            Имя
-            <input type="text" name="name" value={name} onChange={handleChange} />
-            </label>
+        <Form onSubmit={handleSubmit}  autoComplete="on">
+            <LableForm >
+            Name
+            <InputForm type="text" name="name" value={name} onChange={handleChange} />
+            </LableForm>
 
-            <label style={styles.label}>
-            Почта
-            <input
+            <LableForm >
+            Email
+            <InputForm
                 type="email"
                 name="email"
                 value={email}
                 onChange={handleChange}
             />
-            </label>
+            </LableForm>
 
-            <label style={styles.label}>
-            Пароль
-            <input
+            <LableForm >
+            Password
+            <InputForm
                 type="password"
                 name="password"
                 value={password}
                 onChange={handleChange}
             />
-            </label>
+            </LableForm>
 
-            <button type="submit">Зарегистрироваться</button>
-        </form>
-        </div>
+            <FormButton type="submit">Registration</FormButton>
+        </Form>
+        </Box>
     );
 }

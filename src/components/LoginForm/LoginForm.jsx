@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { InputForm, Box, Form } from "./LoginForm.styled";
+import { LableForm, Box, Form, FormTitle, InputForm, FormButton  } from "./LoginForm.styled";
 
 // import { useDispatch } from 'react-redux';
 // import { authOperations } from '../redux/auth';
@@ -31,30 +31,30 @@ export default function LoginForm() {
 
     return (
         <Box>
-        <h2>Please enter your name and password</h2>
+        <FormTitle>Please enter your name and password</FormTitle>
 
         <Form onSubmit={handleSubmit}  autoComplete="off">
-            <InputForm >
-            Почта
-            <input
+            <LableForm >
+            Email
+            <InputForm
                 type="email"
                 name="email"
                 value={email}
                 onChange={handleChange}
             />
-            </InputForm>
+            </LableForm>
 
-            <InputForm >
-            Пароль
-            <input
+            <LableForm >
+            Password
+            <InputForm
                 type="password"
                 name="password"
                 value={password}
                 onChange={handleChange}
             />
-            </InputForm>
+            </LableForm>
 
-            <button type="submit">Войти</button>
+            <FormButton type="submit">Login</FormButton>
         </Form>
         </Box>
     );
