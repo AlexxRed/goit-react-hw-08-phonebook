@@ -1,5 +1,5 @@
 import { Label, InputFilter } from './Filter.styled';
-import { setFilter } from '../../redux/contactsSlice';
+import { setFilter, getFilterValue } from '../../redux/contactsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
@@ -7,13 +7,16 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const Filter = () => {
     const dispatch = useDispatch();
-    const filter = useSelector(state => state.filter.value);
+    const filter = useSelector(getFilterValue);
 
     const changeFilter = e => {
-        if (e.currentTarget.value === '') {
+        console.log(e);
+        if (e.target.value === '') {
             Notify.info('Who are you looking for?')
         }
-        dispatch(setFilter(e.currentTarget.value));
+        dispatch(setFilter(e.target.value));
+        console.log(e.target.value);
+        console.log(filter);
     };
 
     return (<Label>

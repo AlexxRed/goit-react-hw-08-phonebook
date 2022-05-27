@@ -2,15 +2,22 @@ import React from 'react';
 import { Formik, ErrorMessage } from 'formik';
 import { schema } from '../../constants/validationSchema';
 import { MainForm, Label, InputForm, ButtonAdd } from './ContactForm.styled';
-import { useAddNewContactMutation } from '../../redux/contactsSlice';
+// import { useAddNewContactMutation } from '../../redux/contactsSlice';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import { useGetContactsQuery } from '../../redux/contactsSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { getContacts } from '../../redux/contactsSlice';
+import { addContact } from '../../redux/contactsOperations';
+
+// import { useGetContactsQuery } from '../../redux/contactsSlice';
 
 
 
 function ContactForm() {
-    const { data = [] } = useGetContactsQuery();
-    const [addNewContact] = useAddNewContactMutation();
+    // const { data = [] } = useGetContactsQuery();
+    // const [addNewContact] = useAddNewContactMutation();
+    const contacts = useSelector(getContacts);
+    const dispatch = useDispatch();
+    console.log(contacts);
 
     const initialValues = {
         name: '',
@@ -26,14 +33,14 @@ function ContactForm() {
             Notify.info('Phone number must be more than 6 numbers');
             return
         }
-        if (data.find(contact => contact.name.toLowerCase() === newContact.name.toLowerCase())) {
+        if (contacts.find(contact => contact.name.toLowerCase() === newContact.name.toLowerCase())) {
             Notify.info('Contact with this name already exists')
             return
         }
-        addNewContact(newContact);
+        dispatch(addContact(newContact))
         resetForm();
     };
-
+    
     
     const renderError = message => Notify.info(`${message}`);
 

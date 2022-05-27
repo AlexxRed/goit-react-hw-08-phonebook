@@ -8,11 +8,11 @@ const initialState = {
     error: null,
 }
 
-const contactsSlice = createSlice({
+export const contactsSlice = createSlice({
     name: 'contacts',
     initialState,
     reducers: {
-    filterContact: (state, action) => {
+    setFilter: (state, action) => {
         state.filter = action.payload.text;
         },
     },
@@ -68,31 +68,14 @@ const contactsSlice = createSlice({
 })
 
 
+export const { setFilter } = contactsSlice.actions;
+console.log(contactsSlice.actions);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-console.log(contactsSlice);
 
 export default contactsSlice.reducer;
+console.log(contactsSlice.reducer);
+
+export const getContacts = state => state.contacts.items;
+export const getFilterValue = state => state.contacts.filter;
+export const getLoading = state => state.contacts.isLoading;
+export const getError = state => state.contacts.error;
