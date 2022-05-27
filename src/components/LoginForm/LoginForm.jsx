@@ -1,22 +1,10 @@
 import { useState } from 'react';
+import { InputForm, Box, Form } from "./LoginForm.styled";
+
 // import { useDispatch } from 'react-redux';
 // import { authOperations } from '../redux/auth';
 
-const styles = {
-    form: {
-        width: 320,
-    },
-    label: {
-        display: 'flex',
-        flexDirection: 'column',
-        marginBottom: 15,
-    },
-    div: {
-        display: 'flex',
-        justifyContent: 'center',
-        allingItems: 'center',
-    },
-};
+
 
 export default function LoginForm() {
     // const dispatch = useDispatch();
@@ -42,11 +30,11 @@ export default function LoginForm() {
     };
 
     return (
-        <div>
+        <Box>
         <h2>Please enter your name and password</h2>
 
-        <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
-            <label style={styles.label}>
+        <Form onSubmit={handleSubmit}  autoComplete="off">
+            <InputForm >
             Почта
             <input
                 type="email"
@@ -54,9 +42,9 @@ export default function LoginForm() {
                 value={email}
                 onChange={handleChange}
             />
-            </label>
+            </InputForm>
 
-            <label style={styles.label}>
+            <InputForm >
             Пароль
             <input
                 type="password"
@@ -64,10 +52,10 @@ export default function LoginForm() {
                 value={password}
                 onChange={handleChange}
             />
-            </label>
+            </InputForm>
 
             <button type="submit">Войти</button>
-        </form>
-        </div>
+        </Form>
+        </Box>
     );
 }
