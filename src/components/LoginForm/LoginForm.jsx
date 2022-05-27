@@ -11,6 +11,11 @@ const styles = {
         flexDirection: 'column',
         marginBottom: 15,
     },
+    div: {
+        display: 'flex',
+        justifyContent: 'center',
+        allingItems: 'center',
+    },
 };
 
 export default function LoginForm() {
