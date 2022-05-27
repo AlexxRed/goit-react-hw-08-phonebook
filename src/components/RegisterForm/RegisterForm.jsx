@@ -3,16 +3,7 @@ import { LableForm, Box, Form, FormTitle, InputForm, FormButton } from "./Regist
 // import { useDispatch } from 'react-redux';
 // import { authOperations } from '../redux/auth';
 
-const styles = {
-    form: {
-        width: 320,
-    },
-    label: {
-        display: 'flex',
-        flexDirection: 'column',
-        marginBottom: 15,
-    },
-};
+
 
 export default function RegisterPage() {
     // const dispatch = useDispatch();
