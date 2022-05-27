@@ -2,13 +2,13 @@ import { configureStore } from '@reduxjs/toolkit';
 import {contactsSlice} from './contactsSlice';
 import logger from 'redux-logger';
 import {
-  persistStore,
-  FLUSH,
-  REHYDRATE,
-  PAUSE,
-  PERSIST,
-  PURGE,
-  REGISTER,
+    persistStore,
+    FLUSH,
+    REHYDRATE,
+    PAUSE,
+    PERSIST,
+    PURGE,
+    REGISTER,
 } from 'redux-persist';
 
 

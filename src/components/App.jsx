@@ -10,7 +10,6 @@ import { Routes, Route } from "react-router-dom";
 import { infoStyle } from "services/userInformator";
 import { Loader } from "components/Loader/Loader";
 import { refs } from "../services/refs";
-console.log(refs);
 infoStyle();
 
 

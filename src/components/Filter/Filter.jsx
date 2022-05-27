@@ -6,24 +6,24 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 
 const Filter = () => {
-    const dispatch = useDispatch();
-    const filter = useSelector(getFilterValue);
+    // const dispatch = useDispatch();
+    // const filter = useSelector(getFilterValue);
 
     const changeFilter = e => {
         console.log(e);
         if (e.target.value === '') {
             Notify.info('Who are you looking for?')
         }
-        dispatch(setFilter(e.target.value));
-        console.log(e.target.value);
-        console.log(filter);
+        // dispatch(setFilter(e.target.value));
+        // console.log(e.target.value);
+        // console.log(filter);
     };
 
     return (<Label>
     Find contacts by name
         <InputFilter
             type="text"
-            value={filter}
+            // value={filter}
             onChange={changeFilter} />
     </Label>)
 };

@@ -20,7 +20,7 @@ export const Link = styled(NavLink)`
 `;
 
 export const Header = styled.header`
-  display: flex;
+  display: block;
   justify-content: space-between;
   align-items: center;
   min-height: 80px;
@@ -30,6 +30,7 @@ export const Header = styled.header`
 export const Navigation = styled.nav`
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `;
 
 const filmReel  = keyframes`
@@ -44,6 +45,13 @@ const filmReel  = keyframes`
 
 export const LogoIcon = styled.div`
   animation: ${filmReel} 1s linear infinite;
+  
+`;
+
+export const Box = styled.div`
+  display: flex;
+  justify-content: center;
+  
   
 `;
 

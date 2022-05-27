@@ -15,9 +15,9 @@ import { addContact } from '../../redux/contactsOperations';
 function ContactForm() {
     // const { data = [] } = useGetContactsQuery();
     // const [addNewContact] = useAddNewContactMutation();
-    const contacts = useSelector(getContacts);
-    const dispatch = useDispatch();
-    console.log(contacts);
+    // const contacts = useSelector(getContacts);
+    // const dispatch = useDispatch();
+    // console.log(contacts);
 
     const initialValues = {
         name: '',
@@ -33,11 +33,11 @@ function ContactForm() {
             Notify.info('Phone number must be more than 6 numbers');
             return
         }
-        if (contacts.find(contact => contact.name.toLowerCase() === newContact.name.toLowerCase())) {
-            Notify.info('Contact with this name already exists')
-            return
-        }
-        dispatch(addContact(newContact))
+        // if (contacts.find(contact => contact.name.toLowerCase() === newContact.name.toLowerCase())) {
+        //     Notify.info('Contact with this name already exists')
+        //     return
+        // }
+        // dispatch(addContact(newContact))
         resetForm();
     };
     
