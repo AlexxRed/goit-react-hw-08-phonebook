@@ -10,13 +10,10 @@ const Filter = () => {
     const filter = useSelector(getFilterValue);
 
     const changeFilter = e => {
-        console.log(e);
         if (e.target.value === '') {
             Notify.info('Who are you looking for?')
         }
         dispatch(setFilter(e.target.value));
-        console.log(e.target.value);
-        console.log(filter);
     };
 
     return (<Label>

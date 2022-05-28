@@ -2,20 +2,17 @@ import React from 'react';
 import { Formik, ErrorMessage } from 'formik';
 import { schema } from '../../constants/validationSchema';
 import { MainForm, Label, InputForm, ButtonAdd } from './ContactForm.styled';
-// import { useAddNewContactMutation } from '../../redux/contactsSlice';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from '../../redux/contactsSlice';
 import { addContactApi } from '../../redux/contactsOperations';
 
-// import { useGetContactsQuery } from '../../redux/contactsSlice';
 
 
 
 function ContactForm() {
     const contacts = useSelector(getContacts);
     const dispatch = useDispatch();
-    console.log(contacts);
 
     const initialValues = {
         name: '',
