@@ -34,7 +34,7 @@ export default function RegisterPage() {
 
     return (
         <Box>
-        <FormTitle>Please register to use the phonebook.</FormTitle>
+        <FormTitle>Please register to use the phonebook</FormTitle>
 
         <Form onSubmit={handleSubmit}  autoComplete="on">
             <LableForm >
