@@ -39,6 +39,7 @@ export default function LoginForm() {
             <InputForm
                 type="email"
                 name="email"
+                placeholder="your email"
                 value={email}
                 onChange={handleChange}
             />
@@ -49,6 +50,7 @@ export default function LoginForm() {
             <InputForm
                 type="password"
                 name="password"
+                placeholder="password"
                 value={password}
                 onChange={handleChange}
             />

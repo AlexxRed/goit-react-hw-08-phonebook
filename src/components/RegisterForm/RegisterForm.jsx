@@ -39,7 +39,11 @@ export default function RegisterPage() {
         <Form onSubmit={handleSubmit}  autoComplete="on">
             <LableForm >
             Name
-            <InputForm type="text" name="name" value={name} onChange={handleChange} />
+            <InputForm type="text"
+                name="name"
+                value={name}
+                placeholder="your name"
+                onChange={handleChange} />
             </LableForm>
 
             <LableForm >
@@ -47,6 +51,7 @@ export default function RegisterPage() {
             <InputForm
                 type="email"
                 name="email"
+                placeholder="your email"        
                 value={email}
                 onChange={handleChange}
             />
@@ -57,6 +62,7 @@ export default function RegisterPage() {
             <InputForm
                 type="password"
                 name="password"
+                placeholder="password"
                 value={password}
                 onChange={handleChange}
             />
