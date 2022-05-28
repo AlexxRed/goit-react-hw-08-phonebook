@@ -1,6 +1,6 @@
 
 export const Greetings = () => {
     return (
-        <h2>Wellcome</h2>
+        <h2>Welcome</h2>
     )
 } 
