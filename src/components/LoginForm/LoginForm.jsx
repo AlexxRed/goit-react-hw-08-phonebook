@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { LableForm, Box, Form, FormTitle, InputForm, FormButton  } from "./LoginForm.styled";
 
-// import { useDispatch } from 'react-redux';
-// import { authOperations } from '../redux/auth';
+import { useDispatch } from 'react-redux';
+import  operations  from '../../redux/auth/authOperations';
 
 
 
 export default function LoginForm() {
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -24,7 +24,7 @@ export default function LoginForm() {
 
     const handleSubmit = e => {
         e.preventDefault();
-        // dispatch(authOperations.logIn({ email, password }));
+        dispatch(operations.logIn({ email, password }));
         setEmail('');
         setPassword('');
     };

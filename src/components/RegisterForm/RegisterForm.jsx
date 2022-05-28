@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { LableForm, Box, Form, FormTitle, InputForm, FormButton } from "./RegisterForm.styled";
-// import { useDispatch } from 'react-redux';
-// import { authOperations } from '../redux/auth';
+import { useDispatch } from 'react-redux';
+import  operations  from '../../redux/auth/authOperations';
 
 
 
 export default function RegisterPage() {
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -26,7 +26,7 @@ export default function RegisterPage() {
 
     const handleSubmit = e => {
         e.preventDefault();
-        // dispatch(authOperations.register({ name, email, password }));
+        dispatch(operations.register({ name, email, password }));
         setName('');
         setEmail('');
         setPassword('');
