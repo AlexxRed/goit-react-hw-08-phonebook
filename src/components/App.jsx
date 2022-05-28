@@ -1,27 +1,28 @@
-import Layout from "./Layout/Layout";
-// import HomePage from "pages/HomePage/HomePage";
-// import ContactsPage from "pages/ContactsPage/ContactsPage";
-// import RegisterPage  from "pages/RegisterPage/RegisterPage";
-// import LoginPage from "pages/LoginPage/LoginPage";
-// import NotFoundPage from "pages/NotFoundPage/NotFoundPage";
-
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import  operations  from '../redux/auth/authOperations';
 import { lazy, Suspense } from "react";// lazy,
 import { Routes, Route } from "react-router-dom";
 import { infoStyle } from "services/userInformator";
 import { Loader } from "components/Loader/Loader";
 import { refs } from "../services/refs";
+import Layout from "./Layout/Layout";
 infoStyle();
 
 
-
-// const Layout = lazy(() => import("../components/Layout/Layout" /* webpackChunkName: "layout" */));
 const HomePage = lazy(() => import("pages/HomePage/HomePage" /* webpackChunkName: "home-page" */));
-const ContactsPage = lazy(() => import("pages/ContactsPage/ContactsPage" /* webpackChunkName: "movie-page" */));
-const RegisterPage = lazy(() => import("pages/RegisterPage/RegisterPage" /* webpackChunkName: "details-page" */));
-const LoginPage = lazy(() => import("pages/LoginPage/LoginPage" /* webpackChunkName: "cast" */));
+const ContactsPage = lazy(() => import("pages/ContactsPage/ContactsPage" /* webpackChunkName: "contacts-page" */));
+const RegisterPage = lazy(() => import("pages/RegisterPage/RegisterPage" /* webpackChunkName: "register-page" */));
+const LoginPage = lazy(() => import("pages/LoginPage/LoginPage" /* webpackChunkName: "login-page" */));
 const NotFoundPage = lazy(() => import("pages/NotFoundPage/NotFoundPage" /* webpackChunkName: "not-found" */));
 
 export function App() {
+    const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(operations.fetchCurrentUser());
+  }, [dispatch]);
+
   return (
   <>
       <Suspense fallback={<>{<Loader/>}</>}>
