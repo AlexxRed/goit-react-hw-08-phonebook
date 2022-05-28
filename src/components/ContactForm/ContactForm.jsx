@@ -6,15 +6,13 @@ import { MainForm, Label, InputForm, ButtonAdd } from './ContactForm.styled';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from '../../redux/contactsSlice';
-import { addContact } from '../../redux/contactsOperations';
+import { addContactApi } from '../../redux/contactsOperations';
 
 // import { useGetContactsQuery } from '../../redux/contactsSlice';
 
 
 
 function ContactForm() {
-    // const { data = [] } = useGetContactsQuery();
-    // const [addNewContact] = useAddNewContactMutation();
     const contacts = useSelector(getContacts);
     const dispatch = useDispatch();
     console.log(contacts);
@@ -37,7 +35,7 @@ function ContactForm() {
             Notify.info('Contact with this name already exists')
             return
         }
-        dispatch(addContact(newContact))
+        dispatch(addContactApi(newContact))
         resetForm();
     };
     

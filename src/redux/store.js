@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { contactsSlice } from './contactsSlice';
+import { contactsSliceReducer }  from './contactsSlice';
 import authSliceReducer from './auth/authSlice'
 import logger from 'redux-logger';
 import {
@@ -15,7 +15,7 @@ import {
 
 export const store = configureStore({
     reducer: {
-        [contactsSlice.name]: contactsSlice.reducer,
+        contacts: contactsSliceReducer,
         userAuth: authSliceReducer,
     },
     middleware: (getDefaultMiddleware) => [...getDefaultMiddleware(
