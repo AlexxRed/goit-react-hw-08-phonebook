@@ -32,33 +32,30 @@ export function App() {
         <Routes>
             <Route path={refs.layout} element={<Layout />}>
               <Route index element={<HomePage />} />
-              <Route
-                path={refs.registerPage}
-                element={
-                  <PublicRoute>
-                    <RegisterPage />
-                  </PublicRoute>
-                }
-              />
-              <Route
-                path={refs.loginPage}
-                element={
-                  <PublicRoute>
-                    <LoginPage />
-                  </PublicRoute>
-                }
-              />
-              <Route
-                path={refs.contactsPage}
-                element={
-                  <PrivateRoute>
-                    <ContactsPage />
-                  </PrivateRoute>
-                }
-              />
-              {/* <Route path={refs.contactsPage} element={<ContactsPage/>}/> */}
-              {/* <Route path={refs.registerPage} element={<RegisterPage />}/> */}
-              {/* <Route path={refs.loginPage} element={<LoginPage/>}/> */}
+                    <Route
+                      path="contacts"
+                      element={
+                        <PrivateRoute>
+                          <ContactsPage />
+                        </PrivateRoute>
+                        }
+                      />
+                      <Route
+                        path={refs.registerPage}
+                        element={
+                        <PublicRoute restricted>
+                          <RegisterPage />
+                        </PublicRoute>
+                        }
+                      />
+                      <Route
+                        path={refs.loginPage}
+                        element={
+                          <PublicRoute restricted>
+                            <LoginPage />
+                          </PublicRoute>
+                        }
+                    />
               <Route path={refs.notFoundPage} element={<NotFoundPage/>}/>
             </Route >
           </Routes>
