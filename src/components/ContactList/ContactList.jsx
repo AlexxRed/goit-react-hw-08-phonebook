@@ -14,7 +14,6 @@ const ContactList = () => {
   const filter = useSelector(getFilterValue);
 
   const isLoading = false;
-  console.log(filter);
 
   useEffect(() => {
     dispatch(fetchAllContacts());
@@ -31,7 +30,6 @@ const ContactList = () => {
 
   const deleteContact = id => {
     dispatch(deleteContactApi(id))
-    console.log(id);
   };
 
   return (
