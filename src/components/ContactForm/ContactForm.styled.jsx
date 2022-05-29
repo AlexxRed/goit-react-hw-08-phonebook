@@ -1,6 +1,7 @@
 
 import styled from '@emotion/styled';
 import { Form, Field } from 'formik';
+import {Button} from '@mui/material';
 
 export const MainForm = styled(Form)`
   margin-left: auto;
@@ -22,11 +23,11 @@ export const InputForm = styled(Field)`
   background-color: #868d79;
 `;
 
-export const ButtonAdd = styled.button`
+export const ButtonAdd = styled(Button)`
   cursor: pointer;
   border-radius: 4px;
-  padding: 5px 10px;
-  background-color: green;
+  padding: 5px 5px;
+  background-color: #1565c0;
   color: white;
   font-weight: 500;
   &:hover,

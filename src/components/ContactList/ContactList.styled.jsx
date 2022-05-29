@@ -1,4 +1,7 @@
 import styled from '@emotion/styled';
+import DeleteIcon from '@mui/icons-material/Delete';
+
+
 
 export const List = styled.ul`
     display: block;
@@ -20,13 +23,13 @@ export const ItemList = styled.li`
         width: 8px;
         height: 8px;
         border-radius: 50%;
-        background-color: #446b85;
+        background-color: #1565c0;
         margin-right: 15px;
         margin-left: 30px;
     }
 `;
 
-export const ButtonDelete = styled.button`
+export const ButtonDelete = styled(DeleteIcon)`
     cursor: pointer;
     margin-left: 15px;
     border-radius: 5px;
