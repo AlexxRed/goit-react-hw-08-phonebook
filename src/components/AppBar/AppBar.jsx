@@ -1,6 +1,6 @@
-import { Link, Header, Logo, Navigation, LogoIcon, Box } from './AppBar.styled';
-import { NavLink } from 'react-router-dom';
-import logo from '../../images/long-film.png'
+import { Link, Header, Navigation, Box} from './AppBar.styled';//Logo,LogoIcon 
+// import { NavLink } from 'react-router-dom';
+// import logo from '../../images/long-film.png'
 import UserMenu from '../UserMenu/UserMenu';
 import { refs } from "../../services/refs";
 import { useSelector } from 'react-redux';
@@ -14,9 +14,9 @@ export function AppBar() {
         <Header>
             <Navigation>
                 <Box>
-                    <NavLink to={refs.layout}><Logo>
+                    {/* <NavLink to={refs.layout}><Logo>
                     <LogoIcon src={logo} alt="logo" />
-                    </Logo></NavLink>
+                    </Logo></NavLink> */}
                     <Link to={refs.layout}>Home</Link>
                     <Link to={refs.contactsPage}>Contacts</Link>
                 </Box>
