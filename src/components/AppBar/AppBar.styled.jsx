@@ -1,12 +1,21 @@
 import styled from '@emotion/styled';
-import {  keyframes } from '@emotion/react'
 import { NavLink } from 'react-router-dom';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 
-export const Logo = styled.div`
+export const Logo = styled(LocalPhoneIcon)`
+  display: block;
+  text-align: center;
+  padding: 6px;
   overflow: hidden;
-  height: 24px;
-  width: 24px; 
+  height: 40px;
+  width: 40px;
+  fill: #1565c0;
+  &:hover,
+  &:focus {
+        fill: #23c015;
+    }
 `;
+
 export const Link = styled(NavLink)`
   display: inline-block;
   text-decoration: none;
@@ -15,7 +24,7 @@ export const Link = styled(NavLink)`
   color: #2a363b;
   font-size: 18px;
   &.active {
-    color: #5d4cc2;
+    color: #a82993;
   }
 `;
 
@@ -33,25 +42,9 @@ export const Navigation = styled.nav`
   justify-content: space-between;
 `;
 
-const filmReel  = keyframes`
-  0% {
-    transform: translateY(-7px);
-  }
-  100% {
-    transform: translateY(-29px);
-  }
-`;
-
-
-export const LogoIcon = styled.div`
-  animation: ${filmReel} 1s linear infinite;
-  
-`;
 
 export const Box = styled.div`
   display: flex;
   justify-content: center;
-  
-  
 `;
 
