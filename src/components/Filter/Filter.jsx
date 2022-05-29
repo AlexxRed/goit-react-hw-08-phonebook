@@ -1,4 +1,4 @@
-import { Label, InputFilter } from './Filter.styled';
+import { Label, InputFilter,FilterTitle } from './Filter.styled';
 import { setFilter, getFilterValue } from '../../redux/contactsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
@@ -17,7 +17,7 @@ const Filter = () => {
     };
 
     return (<Label>
-    Find contacts by name
+    <FilterTitle>Find contacts by name</FilterTitle>
         <InputFilter
             type="text"
             value={filter}

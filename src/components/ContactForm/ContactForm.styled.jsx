@@ -6,21 +6,24 @@ import {Button} from '@mui/material';
 export const MainForm = styled(Form)`
   margin-left: auto;
   margin-right: auto;
-  width: 200px;
+  width: 300px;
   padding: 20px 20px 20px 20px;
   border-radius: 10px; 
-  border: 2px dotted #2778a7;
+  border: 3px dotted #2778a7;
+  background-color: #8080809d
 `;
 
 export const Label = styled.label`
+  width: 300px;
   font-size: 18px;
 `;
 
 export const InputForm = styled(Field)`
+width: 270px;
   margin-top: 5px;
   margin-bottom: 20px;
   padding: 10px;
-  background-color: #868d79;
+  background-color: #3a7179ab;
 `;
 
 export const ButtonAdd = styled(Button)`

@@ -4,14 +4,19 @@ export const Label = styled.label`
     display:block;
     margin-left: auto;
     margin-right: auto;
-    width: 200px;
-    font-size: 18px;
+    width: 300px;
+    font-size: 22px;
     display: flex;
     flex-direction: column;
 `;
 
 export const InputFilter = styled.input`
-        padding: 5px;
+        padding: 10px;
         margin-top: 5px;
-        background-color: #749166;
+        background-color: #3a7179ab;
+`;
+
+export const FilterTitle = styled.h4`
+    color: #1565c0;
+    /* background-color: #85717179; */
 `;

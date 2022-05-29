@@ -30,8 +30,8 @@ export const ContactAvatar = styled(ContactPhoneIcon)`
     display: block;
     align-items: center;
     fill: #1565c0;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 `;
 
 export const ListItem = styled.li`
@@ -40,6 +40,7 @@ export const ListItem = styled.li`
     justify-content: space-between;
     width: 400px;
     border-bottom: 1px dotted #2778a7;
+    margin-bottom: 10px;
     /* &::before {
         content: '';
         width: 8px;
@@ -68,7 +69,7 @@ export const ButtonDelete = styled(DeleteIcon)`
 export const ContactName = styled.span`
     display:block;
     width: 300px;
-    color: #1e7716;
+    color: #0a415a;
     font-size: 24px;
     font-weight: 500;
 `;
@@ -76,4 +77,5 @@ export const ContactName = styled.span`
 export const ContactNumber = styled.a`
     display:block;
     width: 300px;
+    color: #000000;
 `;
