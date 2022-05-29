@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { List, ButtonDelete, ItemList, ContactName, ContactNumber } from './ContactList.styled';
+import { List, ButtonDelete, ListItem, ContactName, ContactNumber, ContactAvatar, ContactBox } from './ContactList.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { useMemo } from 'react';
 import { Loader } from 'components/Loader/Loader';
@@ -38,15 +38,16 @@ const ContactList = () => {
     {isLoading && <Loader/>}
     {visibleContacts.length === 0 && <h3>...oops has no contacts :(</h3>}
     {visibleContacts.map(({ id, name, number, phone }) => (
-      <ItemList key={id}>
-        <p>
+      <ListItem key={id}>
+        <ContactAvatar/>
+        <ContactBox>
           <ContactName>{name}:</ContactName>
           <ContactNumber href={`tel:${number??phone}`}>{number??phone}</ContactNumber>
-        </p>
+        </ContactBox>
         <ButtonDelete type="button" onClick={() => deleteContact(id)}>
           Delete
         </ButtonDelete>
-      </ItemList>
+      </ListItem>
     ))}
   </List>
 );
