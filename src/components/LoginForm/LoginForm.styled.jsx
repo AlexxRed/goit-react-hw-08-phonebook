@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import phototel from '../../images/telephone-g6f2f537ba_1920.jpg';
 
 export const Box = styled.div`
     display: flex;
@@ -12,6 +13,11 @@ export const Box = styled.div`
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),url(${phototel});
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    /* max-width: 100%; */
 `;
 
 export const FormTitle = styled.h3`
@@ -48,5 +54,5 @@ export const InputForm = styled.input`
 export const FormButton = styled.button`
     padding: 10px;
     border-radius: 5px;
-    
+    cursor: pointer;
 `;
