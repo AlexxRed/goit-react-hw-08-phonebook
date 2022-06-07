@@ -17,7 +17,6 @@ export const Box = styled.div`
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
-    /* max-width: 100%; */
 `;
 
 export const FormTitle = styled.h3`
@@ -31,7 +30,6 @@ export const FormTitle = styled.h3`
 export const Form = styled.form`
     display: block;
     width: 320px;
-    /* height: 300px; */
 `;
 
 export const LableForm = styled.label`
