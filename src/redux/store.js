@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { contactsSliceReducer }  from './contactsSlice';
 import authSliceReducer from './auth/authSlice'
-import logger from 'redux-logger';
+// import logger from 'redux-logger';
 import storage from 'redux-persist/lib/storage';
 import {
     persistStore,
@@ -32,7 +32,7 @@ export const store = configureStore({
                 ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
             },
         }
-    ),logger]
+    ),]//logger
 });
 
 export const persistor = persistStore(store);

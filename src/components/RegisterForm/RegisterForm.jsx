@@ -28,7 +28,7 @@ export default function RegisterPage() {
         e.preventDefault();
         const user = { name, email, password };
         dispatch(operations.register(user));
-        console.log(user);
+        // console.log(user);
         setName('');
         setEmail('');
         setPassword('');
