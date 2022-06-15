@@ -1,1 +1,1 @@
-https://alexxred.github.io/phonebook/
+https://alexxred.github.io/goit-react-hw-08-phonebook/
